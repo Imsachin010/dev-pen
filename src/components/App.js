@@ -4,8 +4,8 @@ function App() {
   return (
     <>
       <div className="pane top-pane">
-        <Editor/>
-        <Editor/>
+        <Editor language="xml" displayName="HTML"/>
+        <Editor />
         <Editor/>
       </div>
       <div className="pane">
