@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from "react";
 import Editor from "./Editor";
+import uselocalstorage from "../hooks/uselocalstorage";
 function App() {
-  const [html, setHtml ] = useState('');
-  const [Css, setCss ] = useState('');
-  const [js, setJS ] = useState('');
+  const [html, setHtml ] = uselocalstorage('html', '');
+  const [Css, setCss ] = useState('css', '');
+  const [js, setJS ] = useState('js','');
   const [srcDoc, setSrcDoc] = useState('');
 
   useEffect(() => {
@@ -16,6 +17,7 @@ function App() {
         </html>    
       ')
     },250)
+
     return () => clearTimeout(timeout)
   },[html, Css, js])
   return (
@@ -46,6 +48,6 @@ function App() {
       </div>
     </>
   )
-  }
+}
 
 export default App;

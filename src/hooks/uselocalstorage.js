@@ -20,9 +20,5 @@ export default function uselocalstorage(key, initialValue)
         localStorage.setItem(prefixedkey, JSON.stringify(value))
     },[prefixedkey, value])
     
-    return (
-        <div>
-        
-        </div>
-    )
+    return [value, setValue]
 }
