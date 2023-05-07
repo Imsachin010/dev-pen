@@ -22,6 +22,9 @@ body{
 .editor-container.collapsed {
     flex-grow: 0;
 }
+.editor-container.collapsed.CodeMirror-scroll{
+    flex-grow: absolute;
+}
 .editor-title {
     display: flex;
     justify-content: space-between;

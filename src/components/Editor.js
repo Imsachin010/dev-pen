@@ -5,7 +5,6 @@ import 'codemirror/mode/xml/xml'
 import 'codemirror/mode/javascript/javascript'
 import 'codemirror/mode/css/css'
 import {Controlled as ControlledEditor } from 'react-codemirror2'
-
 export default function Editor(props) {
     const {
         value,
@@ -23,7 +22,7 @@ export default function Editor(props) {
       <div className={'editor-container ${open ? '' : 'collapsed'}'}>
         <div className='editor-title'>
             {displayName}
-            <button onClick={() =>setOpen => !prev}>o/c</button>
+            <button onClick={() =>setOpen(prevOpen => !prevOpen)}>o/c</button>
         </div>
         <ControlledEditor/>
         onBeforeChange={handleChange}
